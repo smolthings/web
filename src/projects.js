@@ -1,0 +1,77 @@
+import {
+  ArrowLeftRight,
+  Bluetooth,
+  Cable,
+  FileDown,
+  HeartPulse,
+  Moon,
+  PanelTop,
+  Radar,
+  Ruler,
+  Terminal,
+  Timer,
+  Wifi,
+  Zap,
+  Scale,
+  Feather,
+} from "lucide-react";
+
+// One entry per project. `kind` is 'software' or 'hardware'.
+export const projects = [
+  {
+    slug: "mouth",
+    name: "Mouth",
+    kind: "software",
+    icon: "/icons/mouth.png",
+    tagline: "Your iPhone is now a wireless mic.",
+    platforms: ["iOS 17+"],
+    stack: ["Swift", "SwiftUI", "VBAN"],
+    features: [
+      { icon: Wifi, label: "VBAN over UDP" },
+      { icon: Zap, label: "Low latency" },
+      { icon: ArrowLeftRight, label: "Two-way audio" },
+      { icon: Cable, label: "PipeWire ready" },
+      { icon: Feather, label: "Zero dependencies, nice" },
+      { icon: Radar, label: "Finds your PC" },
+    ],
+    pairs: "ear",
+  },
+  {
+    slug: "ear",
+    name: "Ear",
+    kind: "software",
+    icon: "/icons/ear.png",
+    tagline: "The desktop side of Mouth.",
+    platforms: ["macOS", "Windows", "Linux"],
+    stack: ["Rust", "Slint", "cpal"],
+    features: [
+      { icon: Radar, label: "Bonjour discovery" },
+      { icon: ArrowLeftRight, label: "PC audio → phone" },
+      { icon: Timer, label: "40 ms buffer" },
+      { icon: PanelTop, label: "Lives in the tray" },
+      { icon: Cable, label: "Virtual mic device" },
+      { icon: Zap, label: "Native & tiny" },
+    ],
+    pairs: "mouth",
+  },
+  {
+    slug: "nice",
+    name: "Nice",
+    kind: "software",
+    icon: "/icons/nice.png",
+    tagline: "scale & tape. No account. Full privacy.",
+    platforms: ["iOS"],
+    stack: ["SwiftUI", "SwiftData", "HealthKit", "CoreBluetooth"],
+    features: [
+      { icon: Bluetooth, label: "Direct Bluetooth" },
+      { icon: HeartPulse, label: "Apple Health sync" },
+      { icon: Scale, label: "15+ body metrics" },
+      { icon: Ruler, label: "16 tape sites" },
+      { icon: Moon, label: "Records in background" },
+      { icon: FileDown, label: "CSV export" },
+      { icon: Terminal, label: "Raw packet log for da nerds out there" },
+    ],
+  },
+];
+
+export const bySlug = Object.fromEntries(projects.map((p) => [p.slug, p]));
