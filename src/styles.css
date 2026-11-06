@@ -40,6 +40,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .wordmark { font-weight: 600; font-size: 15px; letter-spacing: -0.02em; }
 .wordmark span { color: var(--pink); }
+.wordmark .dot {
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffb6d5, #cdb4ff, #aae1ff, #b4f5d7, #ffd7b4, #ffb6d5);
+  background-size: 400% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  animation: dot-shift 4s linear infinite;
+}
+@keyframes dot-shift { to { background-position: 400% 0; } }
 .icon-btn {
   display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px;
   color: var(--muted); transition: color 0.2s, background 0.2s;

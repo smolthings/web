@@ -39,6 +39,7 @@ export default function App() {
       <header className="nav">
         <Link to="/" className="wordmark">
           smol<span>things</span>
+          <b className="dot">.</b>work
         </Link>
         <nav>
           <a href="https://github.com/TheCodedKid" target="_blank" rel="noreferrer" aria-label="GitHub" className="icon-btn">
